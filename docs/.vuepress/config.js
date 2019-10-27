@@ -1,5 +1,6 @@
 
-
+// const path = require('path')
+// console.log('adwdawd',path.join(__dirname, './public'))
 
 module.exports = {
     title: "dale's blog",
@@ -9,8 +10,16 @@ module.exports = {
         ['meta', { 'http-equiv': 'expires', content: '0' }],
         ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
+    description: '汪小鱼的个人站点',
     base: '/Blog-VuePress/',
     dest: 'site',
+    configureWebpack: {
+        resolve: {
+          alias: {
+            '@img': '../images'
+          }
+        }
+    },
     themeConfig: {
         sidebarDepth: 0,
         repo: 'https://github.com/dalewang1995/Blog-VuePress',
@@ -20,6 +29,9 @@ module.exports = {
         editLinks: true,
         editLinkText: '帮助我改进页面内容！',
         lastUpdated: '最后更新时间',
+        nav: [
+            { text: "Home", link: "/" }
+        ],
         sidebar: [
             {
                 key: 'project',
