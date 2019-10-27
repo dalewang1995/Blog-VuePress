@@ -1,0 +1,13 @@
+{
+  "name": "Blog-VuePress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "github": "sh deploy.sh",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": "https://github.com/dalewang1995/Blog-VuePress.git",
+  "author": "dale_na@163.com",
+  "license": "MIT"
+}
