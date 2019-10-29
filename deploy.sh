@@ -7,6 +7,7 @@ set -e
 npm run build
 
 # Commit changes.
+# $#
 msg="deploy at `date`"
 if [ $# != 0 ]
   then msg="$*"
