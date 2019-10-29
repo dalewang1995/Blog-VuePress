@@ -64,6 +64,7 @@ module.exports = {
                 collapsable: true,
                 children: [
                     'server/ssr-readme.md',
+                    'server/docker-01.md'
                 ]
 
             },
