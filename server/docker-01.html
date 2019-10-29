@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>docker入门篇-部署静态页面 | dale&#39;s blog</title>
+    <meta name="description" content="汪小鱼的个人站点">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <link rel="icon" href="/Blog-VuePress/favicon.ico">
+    
+    <link rel="preload" href="/Blog-VuePress/assets/css/0.styles.85a63941.css" as="style"><link rel="preload" href="/Blog-VuePress/assets/js/app.2f4a977f.js" as="script"><link rel="preload" href="/Blog-VuePress/assets/js/2.a9b64fa2.js" as="script"><link rel="preload" href="/Blog-VuePress/assets/js/22.0bf800f7.js" as="script"><link rel="prefetch" href="/Blog-VuePress/assets/js/10.71b2ebcf.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/11.1b3d577f.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/12.96e2744f.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/13.a15b61d5.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/14.5b331eea.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/15.db242aaf.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/16.ad23c485.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/17.769d8e06.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/18.c466589d.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/19.e76c355e.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/20.ca7c4c85.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/21.98a07961.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/23.b4c2f02a.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/24.769d0e61.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/25.1319d15b.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/26.cf6f72b5.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/3.fe6ffda9.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/4.d8a3cc41.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/5.539f12d3.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/6.91329aee.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/7.8ee51a73.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/8.f4ce76d9.js"><link rel="prefetch" href="/Blog-VuePress/assets/js/9.7aa24ab1.js">
+    <link rel="stylesheet" href="/Blog-VuePress/assets/css/0.styles.85a63941.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Blog-VuePress/" class="home-link router-link-active"><!----> <span class="site-name">dale's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Blog-VuePress/" class="nav-link">Home</a></div> <a href="https://github.com/dalewang1995/Blog-VuePress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Blog-VuePress/" class="nav-link">Home</a></div> <a href="https://github.com/dalewang1995/Blog-VuePress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Project</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Server</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Blog-VuePress/server/ssr-readme.html" class="sidebar-link">了解ssr</a></li><li><a href="/Blog-VuePress/server/docker-01.html" class="active sidebar-link">docker入门篇-部署静态页面</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>效率工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>随笔</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="docker入门篇-部署静态页面"><a href="#docker入门篇-部署静态页面" class="header-anchor">#</a> docker入门篇-部署静态页面</h2> <h3 id="什么是docker"><a href="#什么是docker" class="header-anchor">#</a> 什么是docker</h3> <blockquote><p>Docker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 2013 年 3 月以 Apache 2.0 授权协议开源，主要项目代码在 GitHub 上进行维护。Docker 项目后来还加入了 Linux 基金会，并成立推动开放容器联盟（OCI）。</p></blockquote> <blockquote><p>Docker 使用 Google 公司的 Go 语言 开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS 类的 Union FS 等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它隔离的进程，因此称其为容器。最初实现是基于 LXC，从 0.7 版本后开始去除 LXC，转而使用自行开发的 libcontainer，从 1.11 开始，进一步演进使用 runC 和 containerd。</p></blockquote> <blockquote><p>Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻便、快捷。</p></blockquote> <h3 id="docker与前端应用的结合"><a href="#docker与前端应用的结合" class="header-anchor">#</a> docker与前端应用的结合</h3> <p>前端应用使用docker可以带来哪些优势呢？</p> <ol><li>环境一致性</li></ol> <p>比如前端应用需要部署在多台虚拟机上，那么配置多台虚拟机就需要人为操作，增加修改配置，比如node版本升级，都需要一台一台进行，十分浪费时间，而且容易出错。但是使用docker技术，只需要配置一份镜像就可以，十分方便。</p> <ol start="2"><li>方便迁移</li></ol> <p>Docker 确保了运行环境的一致性，使得应用的迁移更加容易。可以很轻易将在一个平台上运行的应用，迁移到另一个平台上，而不用担心运行环境的变化导致应用无法正常运行。比如接到任务说下周要加一个分区，或者客户要求部署私有云，可以很放心的说镜像拿走，而不用担心环境问题。</p> <ol start="3"><li>快速部署、回滚</li></ol> <p>得益于 Docker 使用的分层存储和镜像技术，使得扩展镜像变得非常简单。可以预先把程序需要的依赖，静态资源等在构建过程中添加到镜像，在需要的时候启动该容器实现快速部署、回滚、止血。比如当出现线上事故需要回滚时，传统做法是触发某些自动化工具去拉代码装依赖打包最后部署，一旦某个环节出了问题，譬如网络被墙了导致依赖拉不下来，构建失败等等，将会导致更验证的问题。</p> <h3 id="docker安装"><a href="#docker安装" class="header-anchor">#</a> docker安装</h3> <p><code>macOS</code></p> <p><code>brew cask install docker</code></p> <p>安装好之后，会出现在mac的应用中，打开docker应用，遇到下载慢的问题可以把homebrew包地址修改为国内镜像（中科大镜像等）</p> <p>其他系统安装 https://yeasy.gitbooks.io/docker_practice/install/</p> <h3 id="使用docker部署前端应用"><a href="#使用docker部署前端应用" class="header-anchor">#</a> 使用docker部署前端应用</h3> <p>####打包前端出dist</p> <p>vue小项目举例，使用官方cli3快速生成项目</p> <p><code>vue create docker-vue</code></p> <p>这里使用yarn打包和启动项目，</p> <p><code>cd docker-vue</code></p> <p><code>yarn run build</code></p> <p>打包出dist文件夹，方便一会打包进docker镜像</p> <h4 id="制作docker镜像"><a href="#制作docker镜像" class="header-anchor">#</a> 制作docker镜像</h4> <p>使用docker官方的nginx镜像</p> <p><code>docker pull nginx:1.14</code></p> <p>查看已安装镜像</p> <p><code>docker image ls</code></p> <h4 id="修改nginx配置文件"><a href="#修改nginx配置文件" class="header-anchor">#</a> 修改nginx配置文件</h4> <p>在当前目录（docker-vue）下创建nginx配置文件 <code>nginx.conf</code>
+配置文件代码如下：</p> <div class="language-conf extra-class"><pre class="language-text"><code>user  nginx;
+worker_processes  1;
+
+error_log  /var/log/nginx/error.log warn;
+pid        /var/run/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] &quot;$request&quot; '
+                      '$status $body_bytes_sent &quot;$http_referer&quot; '
+                      '&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;';
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    server {
+        listen 80 default_server;
+        server_name _;
+
+        location  / {
+        root /usr/share/nginx/html;
+        index  index.html ;
+        try_files $uri $uri/ /index.html;
+        }
+    }
+
+}
+
+
+
+</code></pre></div><h4 id="dockerfile文件修改"><a href="#dockerfile文件修改" class="header-anchor">#</a> Dockerfile文件修改</h4> <p>在当前目录（docker-vue）下，创建Dockerfile文件，Dockerfile 是一个文本文件，其内包含了一条条的 指令(Instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。</p> <div class="language- extra-class"><pre class="language-text"><code>FROM nginx:1.14
+LABEL maintainer &quot;dale_na@163.com&quot;
+ADD ./dist/ /usr/share/nginx/html
+ADD nginx.conf /etc/nginx/
+EXPOSE 80
+
+</code></pre></div><h4 id="构建自定义镜像"><a href="#构建自定义镜像" class="header-anchor">#</a> 构建自定义镜像</h4> <p><code>docker build -t dale_docker .</code></p> <p><code>--tag, -t: 镜像的名字及标签</code></p> <h4 id="启动自定义镜像"><a href="#启动自定义镜像" class="header-anchor">#</a> 启动自定义镜像</h4> <p><code>docker run -d -p 8080:80 dale_docker</code></p> <p><code>-d: 后台运行容器，并返回容器ID</code></p> <p><code>-p: 指定端口映射，格式为：主机(宿主)端口:容器端口</code></p> <p>如果以上配置都操作正确的话，此时打开本地浏览器，输入
+http://localhost:8080/ 就会看到刚刚自己新建的vue项目！</p> <h4 id="其他docker排查错误的命令"><a href="#其他docker排查错误的命令" class="header-anchor">#</a> 其他docker排查错误的命令</h4> <ol><li>查看当前所有docker进程 <code>docker ps -a</code></li> <li>查看容器状态，-f实时刷新 <code>docker logs -f 容器id</code></li> <li>删除容器 <code>docker container rm 容器id</code></li></ol></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/dalewang1995/Blog-VuePress/edit/master/docs/server/docker-01.md" target="_blank" rel="noopener noreferrer">帮助我改进页面内容！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Blog-VuePress/server/ssr-readme.html" class="prev">了解ssr</a></span> <span class="next"><a href="/Blog-VuePress/vue/vue-components.html">理解组件通信之：provide / inject</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Blog-VuePress/assets/js/app.2f4a977f.js" defer></script><script src="/Blog-VuePress/assets/js/2.a9b64fa2.js" defer></script><script src="/Blog-VuePress/assets/js/22.0bf800f7.js" defer></script>
+  </body>
+</html>
